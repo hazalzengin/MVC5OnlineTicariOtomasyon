@@ -286,6 +286,7 @@
     <Content Include="Views\Cariler\CariGetir.cshtml" />
     <Content Include="Views\Cariler\MusteriSatis.cshtml" />
     <Content Include="Views\Personel\Index.cshtml" />
+    <Content Include="Views\Personel\PersonelEkle.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

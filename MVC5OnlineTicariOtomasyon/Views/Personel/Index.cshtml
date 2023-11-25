@@ -18,22 +18,23 @@
         <td>Sil</td>
         <td>Güncelle</td>
     </tr>
-    @foreach (var k in Model)
+
+    @foreach (var u in Model)
     {
         <tr>
-            <td>@k.PersonelId</td>
-            <td>@k.PersonelAd</td>
-            <td>@k.PersonelSoyad</td>
-            <td>@k.PersonelAd</td>
-            <td>@k.Departman.DepartmanAd</td>
+            <td>@u.PersonelId</td>
+            <td>@u.PersonelAd</td>
+            <td>@u.PersonelSoyad</td>
+            <td>@u.PersonelGorsel</td>
+            <td>@u.Departman.DepartmanAd</td>
+           
+            <td>  <a href="/Urun/UrunSil/" class="btn btn-danger">Sil</a></td>
+            <td>  <a href="/Urun/UrunGetir/" class="btn btn-success">Güncelle</a></td>
 
-            <td><a href="/Departman/DepartmanSil/@k." class="btn btn-danger">Sil</a></td>
-            <td><a href="/Departman/DepartmanGetir/@k." class="btn btn-success">Güncelle</a></td>
-            <td><a href="/Departman/DepartmanDetay/@k." class="btn btn-default" style="background-color:aqua">Detaylar</a></td>
+
         </tr>
 
+        }
 
-
-    }
-</table>
-<a href="/Departman/DepartmanEkle" class="btn btn-primary"> Departman Ekle</a></a>
+    </table>
+<a href="/Personel/PersonelEkle" class="btn btn-primary"> Departman Ekle</a></a>
