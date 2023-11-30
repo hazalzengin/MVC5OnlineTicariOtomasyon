@@ -17,22 +17,24 @@
         <td> Departman</td>
         <td>Sil</td>
         <td>Güncelle</td>
+        <td>Detaylar</td>
     </tr>
 
     @foreach (var u in Model)
     {
-        <tr>
-            <td>@u.PersonelId</td>
-            <td>@u.PersonelAd</td>
-            <td>@u.PersonelSoyad</td>
-            <td>@u.PersonelGorsel</td>
-            <td>@u.Departman.DepartmanAd</td>
-           
-            <td>  <a href="/Urun/UrunSil/" class="btn btn-danger">Sil</a></td>
-            <td>  <a href="/Urun/UrunGetir/" class="btn btn-success">Güncelle</a></td>
+<tr>
+    <td>@u.PersonelId</td>
+    <td>@u.PersonelAd</td>
+    <td>@u.PersonelSoyad</td>
+    <td>@u.PersonelGorsel</td>
+    <td>@u.Departman.DepartmanAd</td>
+
+    <td>  <a href="/Personel/PersonelSil/" class="btn btn-danger">Sil</a></td>
+    <td>  <a href="/Personel/PersonelGetir/@u.PersonelId" class="btn btn-warning ">Güncelle</a></td>
+    <td>  <a href="/Departman/DepartmanSatis/@u.PersonelId" class="btn btn-default" style="background-color:lightcoral">Detaylar</a></td>
 
 
-        </tr>
+</tr>
 
         }
 
