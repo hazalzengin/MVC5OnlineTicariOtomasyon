@@ -1,0 +1,48 @@
+﻿@using MVC5OnlineTicariOtomasyon.Models.Classes
+@model List<SatisHareket>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <td> ID</td>
+        <td> Ürün</td>
+        <td> Cari</td>
+        <td> Personel</td>
+        <td> Adet</td>
+        <td>Fiyat</td>
+        <td>Toplam</td>
+        <td>Tarih</td>
+        <td>Güncelle</td>
+        <td>Detaylar</td>
+    </tr>
+
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.Satisid</td>
+            <td>@u.Urun.UrunAd</td>
+            <td>@u.Cari.CariAd @u.Cari.CariSoyad</td>
+            <td>@u.Personel.PersonelAd @u.Personel.PersonelSoyad</td>
+            <td>@u.Adet</td>
+            <td>@u.Fiyat</td>
+            <td>@u.ToplamTutar</td>
+            <td>@u.Tarih </td>
+
+            <td>  <a href="" class="btn btn-danger">Sil</a></td>
+            <td>  <a href="" class="btn btn-warning ">Güncelle</a></td>
+            <td>  <a href="" class="btn btn-default" style="background-color:lightcoral">Detaylar</a></td>
+
+
+        </tr>
+
+    }
+
+</table>
+<a href="/Satis/YeniSatis" class="btn btn-primary">  Yeni Satış Yap</a>
